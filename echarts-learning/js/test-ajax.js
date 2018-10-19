@@ -4,7 +4,8 @@
     script.src="https://code.jquery.com/jquery-3.3.1.min.js";  
     document.getElementsByTagName('head')[0].appendChild(script);  
 
-    $(document).ready(function () {
+    //search
+    (function () {
         $.ajax({
             method: "GET",
             url: "api/user/top10",
@@ -15,5 +16,23 @@
             }
         });
     
-    });
+    })();
+
+    //add
+    (function(){
+        let sendData = {
+            :,
+            :,
+        }
+        $.ajax({
+            method: "GET",
+            url: "api/user/top10",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(sendData),
+            success: function (result) {
+                console.log(result);
+            }
+        });
+    })
 })();

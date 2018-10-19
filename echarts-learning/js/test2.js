@@ -1,6 +1,6 @@
 (function(){
     let myChart = echarts.init(document.getElementById("chart"));
-    let options = {
+    let baseOptions = {
         title:{
             text:'复杂的图表',
             subtext:'试一下'
@@ -58,5 +58,23 @@
 	        }
         }]
     };
+    let mediaHolder = {
+        media:{
+            query:{
+                maxWidth:1000
+            },
+            option:{
+                title:{
+                    show:true,
+                    text:'for test'
+                }
+            }
+        }  
+    }
+    let options = {
+        baseOption:baseOptions,
+        media:mediaHolder
+    };
+    window.onresize = myChart.resize;
     myChart.setOption(options);
 })();
