@@ -1,0 +1,12 @@
+(function(){
+    echarts.init(document.getElementById('pie')).setOption({
+        series:{
+            type:'pie',
+            data:[
+                {name:'A',value:1213},
+                {name:'B',value:2323},
+                {name:'C',value:123},
+            ]
+        }
+    })
+})();
